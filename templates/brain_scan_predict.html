@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<!-- CSS only -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<title>Brain Tumor Detection</title>
+</head>
+
+<body>
+
+	<div class="container-fluid bg-danger text-light p-1">
+		<div class="container bg-danger p-1">
+			<h5 class="display-7 font-weight-bold">This page is deprecated. Use the newer version <a href="{% url 'predictionHome' %}">here</a>.</h5>
+		</div>
+	</div>
+
+	<div class="container-fluid text-light p-5">
+		<div class="container p-5">
+			<h1 class="display-4 font-weight-bold">Brain Tumor Detection</h1>
+			<hr>
+			{% if prediction%}
+			<p>Upload brain MRI image:</p>
+			{% else %}
+			<p>Upload an JPG/JPEG image of a brain MRI to get started:</p>
+			{% endif %}
+			<form method="post" enctype="multipart/form-data">
+				{% csrf_token %}
+				<input type="file" name="{{ form.brain_scan_img.html_name }}"
+					id="{{ form.brain_scan_img.id_for_label }}" accept=".jpeg .jpg" required onchange="validateFileType()" />
+				<button type="submit" class="btn btn-primary">Upload!</button>
+			</form>
+		</div>
+	</div>
+
+	{% if prediction %}
+	<div class="jumbotron">
+		<div class="container">
+			<h1 class="display-7 font-weight-light">The likelihood of a brain tumor is:</h1>
+			<h1 class="display-1 font-weight-bold">
+				<bold>{{ prediction }} %</bold>
+			</h1>
+			<hr class="my-4">
+			<img src="data:image/jpeg;base64, {{original_image}}"></img>
+			<br>
+			<p>{{imageName}}</p>
+		</div>
+	</div>
+	{% endif %}
+	
+
+	{% comment %}
+	<!-- <form method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit" class="btn btn-primary">Upload</button>
+	</form> -->
+	{% endcomment %}
+
+
+
+
+</body>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    function validateFileType(){
+        var file = document.getElementById("{{ form.brain_scan_img.id_for_label }}");
+        var fileName = file.value;
+        var idxDot = fileName.lastIndexOf(".") + 1;
+        var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
+        if (!(extFile=="jpg" || extFile=="jpeg")){
+            alert("Only jpg/jpeg file is allowed!");
+            file.value='';
+        }
+    }
+</script>
+
+</html>

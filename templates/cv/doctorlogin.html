@@ -1,0 +1,251 @@
+{% load static %}
+{% block content %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Tumor Insight Login</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <!-- <link href="assets/img/favicon.png" rel="icon">-->
+    <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/line-awesome/css/line-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+        <div class="container d-flex align-items-center">
+
+            <div class="logo mr-auto">
+                <h1 class="text-light"><a href="/">Tumor Insight</a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            </div>
+
+            <!-- <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li class="active"><a href="index">Home</a></li>                    
+                    <li class="drop-down"><a href="">Account</a>
+                        <ul>
+                            <li><a href="login">Login </a>                            
+                        </ul>
+                    </li>
+                </ul>
+            </nav> -->
+            <!-- .nav-menu -->
+
+        </div>
+    </header><!-- End Header -->
+
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+        <div id="heroCarousel" class="container carousel carousel-fade" data-ride="carousel">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="carousel-container">
+                    <h2 class="animate__animated animate__fadeInDown"> <span>Revolutionizing Brain Tumor Treatment</span></h2>
+                    <p class="animate__animated fanimate__adeInUp"> <span style="text-align: center">
+                        TumorInsight empowers doctors with cutting-edge diagnostic tools for accurate, personalized care.
+                        </span> </p>
+                    <a href="#login" class="btn-get-started animate__animated animate__fadeInUp scrollto">Welcome to Login</a>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="carousel-container">
+                    <h2 class="animate__animated animate__fadeInDown">Precise Tumor Diagnosis. Informed Decisions</h2>
+                    <p class="animate__animated animate__fadeInUp">Advanced imaging analysis for tumor detection, classification, and detailed segmentation ensures optimal treatment planning.</p>
+                    <a href="#login" class="btn-get-started animate__animated animate__fadeInUp scrollto">Welcome to Login</a>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <div class="carousel-container">
+                    <h2 class="animate__animated animate__fadeInDown">Beyond Diagnosis – Prognosis and Patient Cares</h2>
+                    <p class="animate__animated animate__fadeInUp">TumorInsight provides survival predictions and comprehensive patient management tools for data-driven treatment strategies.</p>
+                    <a href="#login" class="btn-get-started animate__animated animate__fadeInUp scrollto">Welcome to Login</a>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+                <div class="carousel-container">
+                    <h2 class="animate__animated animate__fadeInDown"> The Power of Innovation in Your Hands</h2>
+                    <p class="animate__animated animate__fadeInUp">Experience the future of brain tumor diagnostics with TumorInsight's intuitive, specialized platform.</p>
+                    <a href="#login" class="btn-get-started animate__animated animate__fadeInUp scrollto">Welcome to Login</a>
+                </div>
+            </div>
+            <!-- Slide 5
+            <div class="carousel-item">
+                <div class="carousel-container">
+                    <h2 class="animate__animated animate__fadeInDown"> Profitable Business Practices</h2>
+                    <p class="animate__animated animate__fadeInUp">How much you have earned so far and how much you will earn in future. Which Products or services are giving you high profits.</p>
+                    <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get In Touch</a>
+                </div>
+            </div> -->
+
+            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+        </div>
+
+        <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+            <defs>
+                <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+            </defs>
+            <g class="wave1">
+                <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+            </g>
+            <g class="wave2">
+                <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+            </g>
+            <g class="wave3">
+                <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+            </g>
+        </svg>
+
+    </section><!-- End Hero -->
+
+
+
+ <!-- ======= LOGIN Section ======= -->
+ <section id="login" class="login">
+    <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+            <h2>Dr. Login</h2> <br>
+            <p>Dr. Login Form</p>
+        </div>
+
+        <div class="row mt-5">
+
+            <div class="col-lg-6" data-aos="fade-right">
+             
+                  
+                    <img src="{% static 'assets/img/Dlogin.jpg' %}" alt="" width="700">
+
+               
+
+            </div>
+
+            <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left">
+<br> <br> <br> <br> <br>
+                <form  method="POST">
+
+                    {% csrf_token %}
+               
+                    <div class="form-row">
+                        <div class="col-md-8 form-group">
+                            <input name="username" type="text"  class="form-control" id="username" placeholder="Username" data-rule="minlen:4" data-msg="Please enter at least 4 chars"  required/>
+                            <div class="validate"></div>
+                        </div>
+                        <br>
+                        <div class="col-md-8 form-group">
+                            <input name="password" type="password" class="form-control"  id="password" placeholder="********" data-rule="password" data-msg="Please enter password"  required/>
+                            <div class="validate"></div>
+                        </div>                        
+                    </div>
+                   
+                   <div class="text-center"><button type="submit" class="btn btn-dark">Login</button></div>
+                </form>
+                <div>
+                    {% if error_message %}
+                    <div class="alert alert-danger">{{ error_message }}</div>
+                    {% endif %}
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section><!-- End Contact Section -->
+
+
+
+</body>
+   <!-- ======= Footer ======= -->
+   <footer id="footer">
+    <div class="container">
+        <h3>About Us
+        </h3>
+        <p>
+            TumorInsight is where groundbreaking technology meets medical expertise. We are a team of passionate innovators, data scientists, and medical professionals dedicated to transforming brain tumor diagnosis and treatment.  Our cutting-edge medical imaging platform empowers doctors with the precision tools they need to provide the best possible care to their patients.  We believe that through innovation, collaboration, and a relentless focus on patient outcomes, we can make a real difference in the fight against brain tumors.
+        </p>
+        <div class="social-links">
+            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+        <div class="copyright">
+            &copy; Copyright <strong><span>TumorInsight</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/selecao-bootstrap-template/ -->
+            Designed by: TumorInsight <a href="">Solution Expert</a>
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    
+
+</body>
+
+</html>
+{% endblock %}

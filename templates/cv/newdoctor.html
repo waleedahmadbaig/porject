@@ -1,0 +1,214 @@
+{% load static %}
+{% block content %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Brain Tumor Detection</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'assets/css/style1.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+    <style>
+		body {
+			font-family: 'Play', sans-serif;
+			font-weight: 800;
+        }
+        img {
+        margin-top: 20px;
+        display: none;
+        }
+
+        .btn {
+        display: block;
+        margin: 30px auto 0 auto;
+        }
+        .password-field {
+            position: relative; /* To position the icon within the container*/
+        }
+
+        .show-hide {
+            position: absolute;
+            right: 15px; /* Adjust as needed */
+            top: 75%;
+            transform: translateY(-50%); 
+            cursor: pointer;
+        }
+
+	</style>
+   
+
+</head>
+
+<body>
+
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="custom-menu">
+                <button type="button" onclick="navbar()" id="sidebarCollapse" class="btn btn-primary shadow-2 mb-4"> 
+                 
+                </button>
+            </div>
+            <div class="img bg-wrap text-center py-4" style="background-image: url(/static/assets/img/bg_1.jpg);">
+                <div class="user-logo">
+                    <div class="img" style="background-image:url(/static/assets/img/logo.jpg)"></div>
+                    <h3>ADMIN</h3>
+                </div>
+            </div>
+            <ul class="list-unstyled components mb-5">
+                <li class="active">
+                    <a href="/dashboard/"><span class="fa fa-home mr-3"></span> Home</a>
+                </li>
+                <!-- <li>
+                    <a href="/predictionHome/"><span class="fa fa fa-bar-chart mr-3 "><small class="d-flex align-items-center justify-content-center">
+                            </small></span> Prediction Home</a>
+                </li>
+                <li>
+                    <a href="/history/"><span class="fa fa-bar-chart mr-3"></span> History</a>
+                </li>
+               <li>
+                    <a href="/prognosis/"><span class="fa fa-bar-chart mr-3"></span>Prognosis </a>
+                </li>
+                <li >
+                    <a href="/segmentation_block/"><span class="fa fa-bar-chart mr-3"></span>Segmentation</a>
+                </li>
+               -->
+                <li>
+                    <a href="/new-doctor/"><span class="fa fa-bar-chart mr-3"></span>Add new Doctors</a>
+                </li>
+                <li>
+                    <a href="/doctorlist/"><span class="fa fa-bar-chart mr-3"></span>Doctor List</a>
+                </li>
+                <li>
+                    <a href="/contacts/"><span class="fa fa-bar-chart mr-3"></span>Contacts</a>
+                </li>
+                <li>
+                    <a href="/"><span class="fa fa-sign-out mr-3"></span> Sign Out</a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5 pt-5">
+            <h2 class="mb-4" style="color: darkorange;">Tumor Insight</h2>
+        
+            <div>
+                <h1>Add new Doctor</h1>
+        
+                <form method="POST" >
+                    {% csrf_token %}
+        
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">User Name</label>
+                        <input type="text" class="form-control" id="username" placeholder="Enter User Name" name="username">
+                      </div>
+                    
+                    <div class="form-group">
+                    <label for="exampleInputEmail1">First Name</label>
+                    <input type="text" class="form-control" id="fname" aria-describedby="emailHelp" placeholder="Enter Your First Name" name="fname">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Last Name</label>
+                        <input type="text" class="form-control" id="lname" aria-describedby="emailHelp" placeholder="Enter Your Last Name" name="lname">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                      </div>
+        
+                      <div class="form-group password-field">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+                        <i class="show-hide fa fa-eye-slash" aria-hidden="true"></i> 
+                    </div>
+                    
+                    <div class="form-group password-field">
+                        <label for="password1">Confirm Password</label>
+                        <input type="password" class="form-control" id="password1" placeholder="Confirm Password" name="password1">
+                        <i class="show-hide fa fa-eye-slash" aria-hidden="true"></i> 
+                    </div>
+        
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div>
+                {% if messages %} 
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+            
+            </div>
+        </div>        
+ 
+    <script>
+        function navbar(){
+            if(document.getElementById('sidebar').style.marginLeft=="-300px"){
+                document.getElementById('sidebar').style.marginLeft="0px";
+            }
+            else{
+document.getElementById('sidebar').style.marginLeft="-300px";
+            }
+            
+        }
+
+                // Show the first four images
+        $("img:lt(13)").show();
+
+        // When the gallery button is clicked
+        $("#gallery-btn").on('click', function(event) {
+        // Prevent default behavior
+        event.preventDefault();
+        // All of the hidden images
+        var $hidden = $("img:hidden");
+        // Show the next four images
+        $($hidden).slice(0, 13).fadeIn(800);
+        // If the length of $hidden is 4 then hide the button
+        if ($hidden.length == 13) {
+            $(this).fadeOut();
+        }
+        });
+        
+
+
+        // adding eye button script
+        document.addEventListener('DOMContentLoaded', function() {
+        const showHideIcons = document.querySelectorAll('.show-hide');
+
+        showHideIcons.forEach(icon => {
+            icon.addEventListener('click', function() {
+                const passwordField = this.previousElementSibling;  // Get the password input
+                const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordField.setAttribute('type', type);
+
+                // Toggle the icon class
+                this.classList.toggle('fa-eye'); 
+                this.classList.toggle('fa-eye-slash'); 
+            });
+        });
+    });
+
+    </script>
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/popper.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    
+</body>
+
+</html>
+
+{% endblock %}

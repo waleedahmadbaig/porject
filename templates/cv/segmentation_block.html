@@ -1,0 +1,218 @@
+{% load static %}
+{% block content %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Brain Tumor Detection</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'assets/css/style1.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+    <style>
+		body {
+			font-family: 'Play', sans-serif;
+			font-weight: 800;
+        }
+        img {
+        margin-top: 20px;
+        display: none;
+        }
+
+        .btn {
+        display: block;
+        margin: 30px auto 0 auto;
+        }
+	</style>
+   
+
+</head>
+
+<body>
+
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="custom-menu">
+                <button type="button" onclick="navbar()" id="sidebarCollapse" class="btn btn-primary shadow-2 mb-4"> 
+                 
+                </button>
+            </div>
+            <div class="img bg-wrap text-center py-4" style="background-image: url(/static/assets/img/bg_1.jpg);">
+                <div class="user-logo">
+                    <div class="img" style="background-image:url(/static/assets/img/logo.jpg)"></div>
+                    <h3>DR. PANEL</h3>
+                </div>
+            </div>
+            <ul class="list-unstyled components mb-5">
+                <li>
+                    <a href="/doctordashboard/"><span class="fa fa-home mr-3"></span> Home</a>
+                </li>
+                <li>
+                    <a href="/predictionHome/"><span class="fa fa fa-bar-chart mr-3 "><small class="d-flex align-items-center justify-content-center">
+                            </small></span> Prediction Home</a>
+                </li>
+                <li>
+                    <a href="/history/"><span class="fa fa-bar-chart mr-3"></span> History</a>
+                </li>
+               <li>
+                    <a href="/prognosis/"><span class="fa fa-bar-chart mr-3"></span>Prognosis </a>
+                </li>
+                 <li class="active">
+                    <a href="/segmentation_block/"><span class="fa fa-bar-chart mr-3"></span>Segmentation</a>
+                </li>
+                <li >
+                    <a href="/changepassword/"><span class="fa fa-bar-chart mr-3"></span>Change Password</a>
+                </li>
+                <!-- <li>
+                    <a href="/newdoctor/"><span class="fa fa-bar-chart mr-3"></span>Add new Doctors</a>
+                </li>
+                <li>
+                    <a href="/doctorlist/"><span class="fa fa-bar-chart mr-3"></span>Doctor List</a>
+                </li> -->
+                <li>
+                    <a href="/"><span class="fa fa-sign-out mr-3"></span> Sign Out</a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5 pt-5">
+            <h2 class="mb-4" style="color: darkorange;">Segmentation Of Brain Tumor MRI </h2>
+
+            
+
+            <!-- <p>
+                Here are the Following results of NodeBook File
+            </p> -->
+            <!-- VIew History -->
+            <div class="jumbotron" id="prediction">
+            <div class="container overflow-hidden" style="margin-top: 40px;">
+                <div class="col-6 col-md-auto col-sm-auto">
+                    <div class="p-3 border">
+                        <h5 class="display-5 font-weight-bold">Last submission</h5>
+                        <hr class="bg-light border-2 border-top border-light">
+                        {% if last_prediction %}
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                <td>Dr Name</td>
+                                <td>:</td>
+                                <td>{{ last_prediction.doctor }}</td>
+                            </tr>
+                                <tr>
+                                    <td>Patient Name</td>
+                                    <td>:</td>
+                                    <td>{{ last_prediction.name }}</td>
+                                </tr>
+                                <!--<tr>
+                                    <td>Image Name</td>
+                                    <td>:</td>
+                                    <td>{{ last_prediction.imageName }}</td>
+                                </tr>
+                                 <tr>
+                                    <td>Prediction</td>
+                                    <td>:</td>
+                                    <td>{{ last_prediction.prediction }} %</td>
+                                </tr> -->
+                                <tr>
+                                    <td>Timestamp</td>
+                                    <td>:</td>
+                                    <td>{{ last_prediction.timestamp }}</td>
+                                </tr>
+                                <!-- <tr>
+                                    <td>View Image</td>
+                                    <td>:</td>
+                                    <td><a href="../media/{{last_prediction.image}}">View
+                                            image</a></td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                        {% else %}
+                        No records found!<br><br>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- end -->
+            <!-- For segmentation -->
+           
+            
+                <div class="container">
+                    <h1 class="display-7 font-weight-light">The Segmentation of a Brain Tumor:</h1>
+                    <hr class="my-4">
+                    <center>
+                        <img src="../media/{{last_prediction.image}}" alt="Last Image for segmentation" style="max-width:400px; border-radius: 20%; opacity: 70%;">  
+                    <br>
+                    <p>{{imageName}}</p></center>
+                </div>                
+            </div>
+            
+
+            {% if prediction %}
+        <div class="jumbotron" id="prediction">
+            <div class="container"> 
+                <canvas id="predictionChart"></canvas> 
+            </div> 
+        </div>
+        {% endif %}
+	<!-- END -->
+              
+                        
+           
+            </div>  <!-- End container -->
+            
+               
+           
+        </div>
+        
+    </div>
+ 
+    <script>
+        function navbar(){
+            if(document.getElementById('sidebar').style.marginLeft=="-300px"){
+                document.getElementById('sidebar').style.marginLeft="0px";
+            }
+            else{
+document.getElementById('sidebar').style.marginLeft="-300px";
+            }
+            
+        }
+
+                // Show the first four images
+        $("img:lt(13)").show();
+
+        // When the gallery button is clicked
+        $("#gallery-btn").on('click', function(event) {
+        // Prevent default behavior
+        event.preventDefault();
+        // All of the hidden images
+        var $hidden = $("img:hidden");
+        // Show the next four images
+        $($hidden).slice(0, 13).fadeIn(800);
+        // If the length of $hidden is 4 then hide the button
+        if ($hidden.length == 13) {
+            $(this).fadeOut();
+        }
+        });
+        
+    </script>
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/popper.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    
+</body>
+
+</html>
+
+{% endblock %}

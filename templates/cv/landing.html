@@ -1,0 +1,980 @@
+{% load static %}
+{% block content %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Tumor Insight</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <!-- <link href="assets/img/favicon.png" rel="icon">-->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/line-awesome/css/line-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+        <div class="container d-flex align-items-center">
+
+            <div class="logo mr-auto">
+                <h1 class="text-light"><a href="/">Tumor Insight</a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            </div>
+
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#vision">Vision</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <!--<li><a href="/login/">Login </a>
+                    <li class="drop-down"><a href="">Drop Down</a>
+                        <ul>
+                            <li><a href="#">Drop Down 1</a></li>
+                            <li class="drop-down"><a href="#">Drop Down 2</a>
+                                <ul>
+                                    <li><a href="#">Deep Drop Down 1</a></li>
+                                    <li><a href="#">Deep Drop Down 2</a></li>
+                                    <li><a href="#">Deep Drop Down 3</a></li>
+                                    <li><a href="#">Deep Drop Down 4</a></li>
+                                    <li><a href="#">Deep Drop Down 5</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Drop Down 3</a></li>
+                            <li><a href="#">Drop Down 4</a></li>
+                            <li><a href="#">Drop Down 5</a></li>
+                        </ul>
+                    </li>-->
+                    <!-- Demo part for visulization and ML Work -->
+                <!--     <li><a href="#contact">Contact</a></li> -->
+                    <li class="drop-down"><a href="">LOGIN</a>
+                        <ul>
+                            <li><a href="/login/">Admin Login</a></li>
+                            <li><a href="/doctorlogin/">Dr Login</a></li>
+                        </ul>
+                    </li> 
+                 <!--End Demo part for visulization and ML Work -->
+
+
+              <!-- <li class="drop-down"><a href="">Account</a>
+                    <ul>
+                       
+
+                        <li><a href="login">Login </a>
+                           
+                            <li><a href="dashboard">Dashboard </a></li>
+                    </ul>
+                </li> -->
+                </ul>
+            </nav><!-- .nav-menu -->
+
+        </div>
+    </header><!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+        <div id="heroCarousel" class="container carousel carousel-fade" data-ride="carousel">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="carousel-container">
+                    <h2 class="animate__animated animate__fadeInDown"> <span>Revolutionizing Brain Tumor Treatment</span></h2>
+                    <p class="animate__animated fanimate__adeInUp"> <span style="text-align: center">
+                        TumorInsight empowers doctors with cutting-edge diagnostic tools for accurate, personalized care.
+                        </span> </p>
+                    <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="carousel-container">
+                    <h2 class="animate__animated animate__fadeInDown">Precise Tumor Diagnosis. Informed Decisions</h2>
+                    <p class="animate__animated animate__fadeInUp">Advanced imaging analysis for tumor detection, classification, and detailed segmentation ensures optimal treatment planning.</p>
+                    <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get In Touch</a>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <div class="carousel-container">
+                    <h2 class="animate__animated animate__fadeInDown">Beyond Diagnosis – Prognosis and Patient Cares</h2>
+                    <p class="animate__animated animate__fadeInUp">TumorInsight provides survival predictions and comprehensive patient management tools for data-driven treatment strategies.</p>
+                    <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get In Touch</a>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+                <div class="carousel-container">
+                    <h2 class="animate__animated animate__fadeInDown"> The Power of Innovation in Your Hands</h2>
+                    <p class="animate__animated animate__fadeInUp">Experience the future of brain tumor diagnostics with TumorInsight's intuitive, specialized platform.</p>
+                    <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get In Touch</a>
+                </div>
+            </div>
+            <!-- Slide 5
+            <div class="carousel-item">
+                <div class="carousel-container">
+                    <h2 class="animate__animated animate__fadeInDown"> Profitable Business Practices</h2>
+                    <p class="animate__animated animate__fadeInUp">How much you have earned so far and how much you will earn in future. Which Products or services are giving you high profits.</p>
+                    <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get In Touch</a>
+                </div>
+            </div> -->
+
+            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+        </div>
+
+        <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+            <defs>
+                <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+            </defs>
+            <g class="wave1">
+                <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+            </g>
+            <g class="wave2">
+                <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+            </g>
+            <g class="wave3">
+                <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+            </g>
+        </svg>
+
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+
+                <div class="section-title" data-aos="zoom-out">
+                    <h2>About</h2>
+
+                </div>
+
+                <div class="row content" data-aos="fade-up">
+                    <div class="col-lg-6">
+                        <br>
+                        <br>
+                        <img src="{% static 'assets/img/about.jpg' %}" alt="" width="500">
+                        <!-- <ul>
+                            <li><i class="ri-check-double-line"></i> Customer targeting</li>
+                            <li><i class="ri-check-double-line"></i>Churn prevention</li>
+                            <li><i class="ri-check-double-line"></i> Sales forecasting</li>
+                            <li><i class="ri-check-double-line"></i> Market analysis</li>
+                            <li><i class="ri-check-double-line"></i>Risk assessment</li>
+                            <li><i class="ri-check-double-line"></i> Financial modeling</li>
+                        </ul>-->
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0">
+                        <div class="section-title" data-aos="zoom-out">
+
+                            <p>Who we are</p>
+                        </div>
+                        <p>
+                            Experience the future of brain tumor diagnostics with TumorInsight's intuitive, specialized platform.
+                        </p>
+                        <p>
+                        <h3>We are pioneers in the field of brain tumor diagnostics. </h3> At TumorInsight, we refuse to accept the status quo.  We envision a future where brain tumors are detected earlier, treatments are more targeted, and patients experience longer, healthier lives.  Our innovative platform is the key to driving this change,  putting the power of advanced technology directly into the hands of medical professionals.
+                        </p>
+                        <!--<a href="#" class="btn-learn-more">Learn More</a>-->
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End About Section -->
+
+        <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+      <div class="container">
+
+        <ul class="nav nav-tabs row d-flex">
+          <li class="nav-item col-3" data-aos="zoom-in">
+            <a class="nav-link active show" data-toggle="tab" href="#tab-1">
+              <i class="ri-gps-line"></i>
+              <h4 class="d-none d-lg-block">Feature-Focused</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
+            <a class="nav-link" data-toggle="tab" href="#tab-2">
+              <i class="ri-body-scan-line"></i>
+              <h4 class="d-none d-lg-block">Benefit-Oriented</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="200">
+            <a class="nav-link" data-toggle="tab" href="#tab-3">
+              <i class="ri-sun-line"></i>
+              <h4 class="d-none d-lg-block"> Problem-Solution</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="300">
+            <a class="nav-link" data-toggle="tab" href="#tab-4">
+              <i class="ri-store-line"></i>
+              <h4 class="d-none d-lg-block">Business Analytical Solutions</h4>
+            </a>
+          </li>
+        </ul>
+
+        <div class="tab-content" data-aos="fade-up">
+          <div class="tab-pane active show" id="tab-1">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>The Power of TumorInsight</h3>
+                <p class="font-italic">
+                 What is you business domain? Your offered products, polices and target customers review.
+                </p>
+                <ul>
+                  <li><i class="ri-check-double-line"></i> Advanced Imaging Analysis: Detect tumors, identify specific types, and visualize with detailed segmentation for precise treatment plans.</li>
+                  <li><i class="ri-check-double-line"></i> Prognostic Insights: Utilize survival prediction algorithms to inform treatment strategies and discussions with patients.</li>
+                  <li><i class="ri-check-double-line"></i>Patient-Centric Management: Track appointments, medications, and visualize progress to provide personalized, data-driven care.</li>
+                  <li><i class="ri-check-double-line"></i>Modular for Efficiency: Specialized modules ensure streamlined workflows for diagnosis, prognosis, and patient management.</li>
+
+                </ul>
+               
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="{% static 'assets/img/features-1.png' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-2">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Transforming Brain Tumor Care</h3>
+                <p>
+                  Collection of your business sales and other financial data in Warehouse.
+                
+                <ul>
+                  <li><i class="ri-check-double-line"></i> Early, Accurate Diagnosis: Cut through uncertainty for doctors and patients with the latest tumor detection and classification technologies.</li>
+                  <li><i class="ri-check-double-line"></i> Informed Treatment Decisions: Empower doctors with prognostic data to personalize treatment plans for the best possible outcomes.</li>
+                  <li><i class="ri-check-double-line"></i> Optimize Patient Experience: Centralize patient records and track progress to enhance patient-doctor communication and support.</li>
+                  <li><i class="ri-check-double-line"></i> Efficiency for Doctors: Intuitive workflows, modular design, and powerful tools save time, allowing doctors to focus on what matters most - patient care.</li>
+                 
+                </ul>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="{% static 'assets/img/features-2.png' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-3">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Tackling the Challenges of Brain Tumor Treatment</h3>
+                <p>
+                  A detailed intelligent computation process to find business insights in your data.
+                </p>
+                <ul>
+                  <li><i class="ri-check-double-line"></i> <b>Challenge:</b>  Diagnostic Uncertainty
+
+                    <b>Solution:</b>   TumorInsight's advanced analysis pinpoints tumors and identifies types for targeted treatment.</li>
+                  <li><i class="ri-check-double-line"></i> <b>Challenge:</b>  Lack of Prognostic Tools
+
+                    <b>Solution:</b> Survival predictions give doctors and patients valuable insights for decision-making.
+                </li>
+                  <li><i class="ri-check-double-line"></i> <b>Challenge:</b> Scattered Patient Information
+
+                    <b>Solution:</b> Centralized management for comprehensive patient history and progress tracking.
+                . </li>
+                </ul>
+                
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="{% static 'assets/img/features-3.png' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-4">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Business Analytical Solutions</h3>
+                <p>
+                  A Dynamic and comprehensive business solution is ready on your digital device. Ready to expand!
+                </p>
+
+                <ul>
+                  <li><i class="ri-check-double-line"></i> Data that is even more valuable if you have the means to take advantage and monetize it in such a way that it can give you a competitive advantage.</li>
+                  <li><i class="ri-check-double-line"></i> If you keep focused on what your business really needs, you will be able to find the right solution.</li>
+                </ul>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="{% static 'assets/img/features-4.png' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+
+        <!-- ======= Services Section ======= -->
+        <section id="services" class="services">
+            <div class="container">
+
+                <div class="section-title" data-aos="zoom-out">
+                    <h2>Services</h2>
+                    <p>How It Works</p>
+                </div>
+                    <center> <p>
+                        TumorInsight, inspired by my <b> 5-step</b> Business Intelligence model:</b>
+                    </p></center>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon-box" data-aos="zoom-in-left">
+                            <div class="icon"><i class="las la-basketball-ball" style="color: #ff689b;"></i></div>
+                            <h4 class="title"><a href="">Clinical Contextualization</a></h4>
+                            <p class="description">We begin by understanding your specific clinical setting, diagnostic workflow, and the types of brain tumor cases you frequently encounter. This ensures TumorInsight is customized to address your most pressing needs.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+                        <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
+                            <div class="icon"><i class="las la-book" style="color: #e9bf06;"></i></div>
+                            <h4 class="title"><a href="">Secure Data Integration</a></h4>
+                            <p class="description">TumorInsight seamlessly integrates with your existing systems (EHR, PACS, etc.) to collect relevant patient MRI scans and associated clinical data.  Security and compliance with medical data privacy standards are our top priority.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mt-5 mt-lg-0 ">
+                        <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="200">
+                            <div class="icon"><i class="las la-file-alt" style="color: #3fcdc7;"></i></div>
+                            <h4 class="title"><a href=""> AI-Powered Analysis</a></h4>
+                            <p class="description">Our advanced algorithms meticulously analyze MRI scans to detect the presence of brain tumors, classify their type (Glioma, Meningioma, Pituitary, etc.),  and generate detailed tumor segmentations.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mt-5">
+                        <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="300">
+                            <div class="icon"><i class="las la-tachometer-alt" style="color:#41cf2e;"></i></div>
+                            <h4 class="title"><a href="">Prognostic Insights</a></h4>
+                            <p class="description">TumorInsight calculates data-driven survival predictions based on tumor characteristics, patient factors, and  established clinical models. This information aids in treatment discussions and personalized care strategies.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mt-5">
+                        <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="400">
+                            <div class="icon"><i class="las la-globe-americas" style="color: #d6ff22;"></i></div>
+                            <h4 class="title"><a href="">Comprehensive Reporting & Management Tools</a></h4>
+                            <p class="description">TumorInsight presents findings in clear, interactive reports designed for doctors. Additionally, the platform offers streamlined tools for appointment scheduling, tracking scan history, medication management, and monitoring patient progress over time.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Services Section -->
+
+
+
+
+        <!-- ======= Portfolio Section ======= -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+
+                <div class="section-title" data-aos="zoom-out">
+                    <h2>Portfolio</h2>
+                    <p>What we've done</p>
+                </div>
+
+                <ul id="portfolio-flters" class="d-flex justify-content-end" data-aos="fade-up">
+                    <li data-filter="*" class="filter-active">All</li>
+                    <li data-filter=".filter-app">Analysis</li>
+                    <li data-filter=".filter-card">prediction</li>
+                    <li data-filter=".filter-web">visualization</li>
+                </ul>
+
+                <div class="row portfolio-container" data-aos="fade-up">
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="portfolio-img"><img src="{% static 'assets/img/portfolio/portfolio-1.PNG' %}" class="img-fluid" alt=""></div>
+                        <div class="portfolio-info">
+                            <h4>Mobile predictions View</h4>
+                            <p>App</p>
+                            <a href="{% static 'assets/img/portfolio/portfolio-1.PNG' %}" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <div class="portfolio-img"><img src="{% static 'assets/img/portfolio/portfolio-2.png' %}" class="img-fluid" alt=""></div>
+                        <div class="portfolio-info">
+                            <h4>System Preview</h4>
+                            <p>Web</p>
+                            <a href="{% static 'assets/img/portfolio/portfolio-2.png' %}" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="portfolio-img"><img src="{% static 'assets/img/portfolio/portfolio-3.PNG' %}" class="img-fluid" alt=""></div>
+                        <div class="portfolio-info">
+                            <h4>Business Understanding</h4>
+                            <p>App</p>
+                            <a href="{% static 'assets/img/portfolio/portfolio-3.png' %}" data-gall="portfolioGallery" class="venobox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                        <div class="portfolio-img"><img src="{% static 'assets/img/portfolio/portfolio-4.png' %}" class="img-fluid" alt=""></div>
+                        <div class="portfolio-info">
+                            <h4>predictions Graph</h4>
+                            <p>Card</p>
+                            <a href="{% static 'assets/img/portfolio/portfolio-4.png' %}" data-gall="portfolioGallery" class="venobox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <div class="portfolio-img"><img src="{% static 'assets/img/portfolio/portfolio-5.jpg' %}" class="img-fluid" alt=""></div>
+                        <div class="portfolio-info">
+                            <h4>System Monitering</h4>
+                            <p>Web</p>
+                            <a href="{% static 'assets/img/portfolio/portfolio-5.jpg' %}" data-gall="portfolioGallery" class="venobox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="portfolio-img"><img src="{% static 'assets/img/portfolio/portfolio-6.PNG' %}" class="img-fluid" alt=""></div>
+                        <div class="portfolio-info">
+                            <h4>Analysis</h4>
+                            <p>App</p>
+                            <a href="{% static 'assets/img/portfolio/portfolio-6.jpg' %}" data-gall="portfolioGallery" class="venobox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                        <div class="portfolio-img"><img src="{% static 'assets/img/portfolio/portfolio-8.png' %}" class="img-fluid" alt=""></div>
+                        <div class="portfolio-info">
+                            <h4>prediction </h4>
+                            <p>Card</p>
+                            <a href="{% static 'assets/img/portfolio/portfolio-8.png' %}" data-gall="portfolioGallery" class="venobox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <div class="portfolio-img"><img src="{% static 'assets/img/portfolio/portfolio-9.jpg' %}" class="img-fluid" alt=""></div>
+                        <div class="portfolio-info">
+                            <h4>predictions </h4>
+                            <p>Web</p>
+                            <a href="{% static 'assets/img/portfolio/portfolio-9.jpg' %}" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <div class="portfolio-img"><img src="{% static 'assets/img/portfolio/portfolio-9.jpg' %}" class="img-fluid" alt=""></div>
+                        <div class="portfolio-info">
+                            <h4>predictions </h4>
+                            <p>Web</p>
+                            <a href="{% static 'assets/img/portfolio/portfolio-10.jpg' %}" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <div class="portfolio-img"><img src="{% static 'assets/img/portfolio/portfolio-11.jpg' %}" class="img-fluid" alt=""></div>
+                        <div class="portfolio-info">
+                            <h4>predictions </h4>
+                            <p>Web</p>
+                            <a href="{% static 'assets/img/portfolio/portfolio-9.jpg' %}" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <div class="portfolio-img"><img src="{% static 'assets/img/portfolio/portfolio-12.jpg' %}" class="img-fluid" alt=""></div>
+                        <div class="portfolio-info">
+                            <h4>predictions </h4>
+                            <p>Web</p>
+                            <a href="{% static 'assets/img/portfolio/portfolio-9.jpg' %}" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Portfolio Section -->
+
+        <!-- ======= Testimonials Section ======= -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+
+                <div class="section-title" data-aos="zoom-out">
+                    <h2>Testimonials</h2>
+                    <p>Our Happy Customers</p>
+                </div>
+
+                <div class="owl-carousel testimonials-carousel" data-aos="fade-up">
+
+                    <div class="testimonial-item">
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            "Tumor Insight's commitment to personalized assistance and delivering clear, informative guidance went above and beyond. Their support made a significant impact on my medical journey, offering clarity and empowerment."
+
+                            
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                        <img src="{% static 'assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+                        <h3>Prof. Dr. Saul Goodman</h3>
+                        <h4>Neuro Surgeon</h4>
+                    </div>  
+                     <!-- To use &  in text &amp; -->
+                    <div class="testimonial-item">
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            "Tumor Insight's dedication to personalized assistance and delivering clear, concise information made a remarkable impact on my medical journey. Their support went beyond expectations, offering guidance that was invaluable."              
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                        <img src="{% static 'assets/img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
+                        <h3>Dr. Sara Wilsson</h3>
+                        <h4>Neuro Specialist</h4>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            "The personalized assistance and clear, concise information provided by Tumor Insight were exceptional. Their unwavering commitment to support made a profound difference in my medical journey, exceeding all expectations."
+
+
+
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                        <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
+                        <h3>Dr. Jena Karlis</h3>
+                        <h4>House Officer</h4>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            "Tumor Insight's support surpassed all expectations, offering personalized assistance and clear information that truly transformed my medical journey. Their commitment to clarity and guidance made all the difference."
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                        <img src="{% static 'assets/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
+                        <h3>Prof. Dr. Matt Brandon</h3>
+                        <h4>Head of Neuro Department</h4>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            "With Tumor Insight, I found unparalleled support and guidance. Their dedication to personalized assistance and providing clear, concise information was instrumental in navigating my medical journey."
+
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                        <img src="{% static 'assets/img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
+                        <h3>Dr. John Larson</h3>
+                        <h4>MBBS Student</h4>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Testimonials Section -->
+
+        <!-- ======= Our Vision======= -->
+        <section id="vision" class="about">
+            <div class="container">
+
+                <div class="section-title" data-aos="zoom-out">
+                    <h2>Our Vision</h2>
+
+                </div>
+
+                <div class="row content" data-aos="fade-up">
+                    <div class="col-lg-6">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <img src="{% static 'assets/img/vision.jpg' %}" alt="" width="500">
+
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0">
+                        <div class="section-title" data-aos="zoom-out">
+
+                            <p>Our Vision</p>
+                        </div>
+                        <p>
+                        <h3> Bold and Transformative</h3>
+                        </p>
+                        <p>
+                            A world where every brain tumor is diagnosed early and treated with the best possible chance for a cure.
+                        </p>
+                        <ul>
+                            <li><i class="ri-check-double-line"></i>  Patient-Focused and Compassionate</li>
+                            <li><i class="ri-check-double-line"></i>Technology as Enabler</li>
+                            <li><i class="ri-check-double-line"></i> Collaborative and Community-Driven</li>
+
+                        </ul>
+                        <!--<a href="#" class="btn-learn-more">Learn More</a>-->
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End our vision-->
+
+        <!-- ======= F.A.Q Section ======= -->
+        <section id="faq" class="faq">
+            <div class="container">
+
+                <div class="section-title" data-aos="zoom-out">
+                    <h2>F.A.Q</h2>
+                    <p>Frequently Asked Questions</p>
+                </div>
+
+                <ul class="faq-list">
+                    <li data-aos="fade-up" data-aos-delay="400">
+                        <a data-toggle="collapse" href="#faq1" class="collapsed">What is TumorInsight?<i class="icofont-simple-up"></i></a>
+                        <div id="faq1" class="collapse" data-parent=".faq-list">
+                            <p>
+                                TumorInsight is a cutting-edge medical imaging platform designed specifically for the diagnosis and management of brain tumors. It provides doctors with advanced tools for tumor detection, classification, prognosis assessment, and patient care management.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="100">
+                        <a data-toggle="collapse" class="" href="#faq2">Who can use TumorInsight? <i class="icofont-simple-up"></i></a>
+                        <div id="faq2" class="collapse show" data-parent=".faq-list">
+                            <p>
+                                TumorInsight is designed for use by medical professionals who specialize in the diagnosis and treatment of brain tumors, such as radiologists, neurologists, neurosurgeons, and oncologists.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="200">
+                        <a data-toggle="collapse" href="#faq3" class="collapsed">How does TumorInsight benefit doctors?<i class="icofont-simple-up"></i></a>
+                        <div id="faq3" class="collapse" data-parent=".faq-list">
+                            <p>
+                                TumorInsight streamlines the diagnostic process, provides accurate and detailed tumor analysis, offers insights into patient prognosis, and centralizes patient management tools. This leads to more informed treatment decisions and improved patient outcomes.
+                            </p>
+                        </div>
+                    </li>
+
+                            <li data-aos="fade-up" data-aos-delay="300">
+                        <a data-toggle="collapse" href="#faq4" class="collapsed">What types of MRI scans does TumorInsight support? <i class="icofont-simple-up"></i></a>
+                        <div id="faq4" class="collapse" data-parent=".faq-list">
+                            <p>
+                             Our TumorInsight System support MRI Images that can detect the Tumor inside the XR-Scan.
+                            </p>
+                        </div>
+                    </li>
+
+                <!-- <li data-aos="fade-up" data-aos-delay="300">
+                        <a data-toggle="collapse" href="#faq5" class="collapsed">What is your available timings to meet up business managers and CEO's? <i class="icofont-simple-up"></i></a>
+                        <div id="faq5" class="collapse" data-parent=".faq-list">
+                            <p>
+                               We are on a cloud which are available 24/7 from all over the world. you can contact us on social media and contact numbers any time. We will reply shortly.
+                            </p>
+                        </div>
+                    </li>
+
+                <li data-aos="fade-up" data-aos-delay="300">
+                        <a data-toggle="collapse" href="#faq6" class="collapsed">What is the 180 degree view business plan? <i class="icofont-simple-up"></i></a>
+                        <div id="faq6" class="collapse" data-parent=".faq-list">
+                            <p>
+                              In a basic plan you can analyze the past performance of your business in a quick view. Till today what you have achieved in a business.
+
+
+                            </p>
+                        </div>
+                    </li>
+
+                <li data-aos="fade-up" data-aos-delay="300">
+                        <a data-toggle="collapse" href="#faq7" class="collapsed">What is 360 degree view business plan?<i class="icofont-simple-up"></i></a>
+                        <div id="faq7" class="collapse" data-parent=".faq-list">
+                            <p>
+                              In a Professional plan you can view, track, forecast and analyze your business with the lens quality view. It is your automated assistance to help in a business.
+                            </p>
+                        </div>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="300">
+                        <a data-toggle="collapse" href="#faq8" class="collapsed">What you are offering in a BI demo solutions? <i class="icofont-simple-up"></i></a>
+                        <div id="faq8" class="collapse" data-parent=".faq-list">
+                            <p>
+                               To completely aware you the benfits of BI services for your business our demo includes business static reports and complete BI process to show the complete process.
+                            </p>
+                        </div>
+                    </li> -->
+
+       
+
+               
+                </ul>
+
+            </div>
+        </section><!-- End F.A.Q Section -->
+
+        <!-- ======= Team Section ======= -->
+        <section id="team" class="team">
+            <div class="container">
+
+                <div class="section-title" data-aos="zoom-out">
+                    <h2>Team</h2>
+
+
+
+
+                </div>
+                <center>
+                    <h1>Meet Our Team</h1>
+                    <p>We believe in building partnerships with the medical community. Schedule a meet-up to discuss the latest advancements in brain tumor imaging and how TumorInsight can support your work.  </p>
+                </center>
+                <div class="row">
+                    <div class="col-lg-12 col-md-6 d-flex align-items-stretch">
+                        <div class="member" data-aos="fade-up" data-aos-delay="100">
+                            <div class="member-img">
+                                <img src="{% static 'assets/img/team/fatima.jpeg' %}" class="img-fluid" alt="">
+                                <div class="social">
+                                    <a href=""><i class="icofont-twitter"></i></a>
+                                    <a href=""><i class="icofont-facebook"></i></a>
+                                    <a href=""><i class="icofont-instagram"></i></a>
+                                    <a href=""><i class="icofont-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4>Fatima Ijaz</h4>
+                                <span>Content Creator & ML Engineer</span>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                        <div class="member" data-aos="fade-up">
+                            <div class="member-img">
+                                <img src="{% static 'assets/img/team/ahmad.jpeg' %}" class="img-fluid" alt="">
+                                <div class="social">
+                                    <a href=""><i class="icofont-twitter"></i></a>
+                                    <a href=""><i class="icofont-facebook"></i></a>
+                                    <a href=""><i class="icofont-instagram"></i></a>
+                                    <a href=""><i class="icofont-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4>Muhammad Ahmad</h4>
+                                <span>Deep Learning Engineer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                        <div class="member" data-aos="fade-up" data-aos-delay="200">
+                            <div class="member-img">
+                                <img src="{% static 'assets/img/team/waleed.jpeg' %}" class="img-fluid" alt="">
+                                <div class="social">
+                                    <a href=""><i class="icofont-twitter"></i></a>
+                                    <a href=""><i class="icofont-facebook"></i></a>
+                                    <a href=""><i class="icofont-instagram"></i></a>
+                                    <a href=""><i class="icofont-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4>Waleed Ahmad Baig</h4>
+                                <span>Django + Machine Learning Developer </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                        <div class="member" data-aos="fade-up" data-aos-delay="100">
+                            <div class="member-img">
+                                <img src="{% static 'assets/img/team/team-3.jpg' %}" class="img-fluid" alt="">
+                                <div class="social">
+                                    <a href=""><i class="icofont-twitter"></i></a>
+                                    <a href=""><i class="icofont-facebook"></i></a>
+                                    <a href=""><i class="icofont-instagram"></i></a>
+                                    <a href=""><i class="icofont-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4>Ma'am Tahreem</h4>
+                                <span>FYP Advisor</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                        <div class="member" data-aos="fade-up" data-aos-delay="300">
+                            <div class="member-img">
+                                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+                                <div class="social">
+                                    <a href=""><i class="icofont-twitter"></i></a>
+                                    <a href=""><i class="icofont-facebook"></i></a>
+                                    <a href=""><i class="icofont-instagram"></i></a>
+                                    <a href=""><i class="icofont-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4>Amanda Jepson</h4>
+                                <span>Accountant</span>
+                            </div>
+                        </div>
+                    </div>-->
+
+                </div>
+
+            </div>
+        </section><!-- End Team Section -->
+
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container">
+
+                <div class="section-title" data-aos="zoom-out">
+                    <h2>Contact</h2>
+                    <p>Contact Us</p>
+                </div>
+
+                <div class="row mt-5">
+
+                    <div class="col-lg-4" data-aos="fade-right">
+                        <div class="info">
+                            <div class="address">
+                                <i class="icofont-google-map"></i>
+                                <h4>Location:</h4>
+                                <p>COMSATS UNIVERSITY ISLAMABAD SAHIWAL CAMPUS, SAHIWAL, 57000</p>
+                            </div>
+
+                            <div class="email">
+                                <i class="icofont-envelope"></i>
+                                <h4>Email:</h4>
+                                <p>tumorinsight6@gmail.com</p>
+                            </div>
+
+                            <div class="phone">
+                                <i class="icofont-phone"></i>
+                                <h4>Call:</h4>
+                                <p>+92 332 0078577</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
+
+                        <form  method="POST" >
+
+                            {% csrf_token %}
+                       
+                            <div class="form-row">
+                                <div class="col-md-6 form-group">
+                                    <input name="Name" type="text"  class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars"  />
+                                    <div class="validate"></div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input name="Email" type="email" class="form-control"  id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email"  />
+                                    <div class="validate"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input name="Subject" type="text" class="form-control" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                <div class="validate"></div>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="Message" class="form-control" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message.. " ></textarea>
+                                <div class="validate"></div>
+                            </div>
+                           <div class="text-center"><button type="submit" class="btn btn-primary">Send Message</button></div>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Contact Section -->
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container">
+            <h3>About Us
+            </h3>
+            <p>
+                TumorInsight is where groundbreaking technology meets medical expertise. We are a team of passionate innovators, data scientists, and medical professionals dedicated to transforming brain tumor diagnosis and treatment.  Our cutting-edge medical imaging platform empowers doctors with the precision tools they need to provide the best possible care to their patients.  We believe that through innovation, collaboration, and a relentless focus on patient outcomes, we can make a real difference in the fight against brain tumors.
+            </p>
+            <div class="social-links">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; Copyright <strong><span>TumorInsight</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/selecao-bootstrap-template/ -->
+                Designed by: TumorInsight <a href="">Solution Expert</a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
+{% endblock %}
